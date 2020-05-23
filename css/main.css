@@ -63,7 +63,7 @@ nav {
 @media screen and (orientation: portrait) {
     nav {
         padding: calc(2vw + 2vh);
-        width: calc(20vw + 20vh);
+        width: calc(25vw + 25vh);
         height: calc(22vw + 22vh);
         font-size: calc(1.6vw + 1.6vh);
         line-height: calc(2.5vw + 2.5vh);
@@ -90,6 +90,7 @@ nav {
 @media screen and (orientation: portrait) {
     .nav_links {
         transform: translateX(100vw);
+        padding: calc(1vw + 1vh);
     }
 }
 
