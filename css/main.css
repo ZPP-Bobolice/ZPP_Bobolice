@@ -5,6 +5,11 @@ html, body {
     overflow-x: hidden;
     padding: 0px;
     scroll-behavior: smooth;
+    background: #146a6e;
+}
+
+.landing_img {
+    min-height: 100vh;
 }
 
 .burger {
@@ -43,7 +48,7 @@ nav {
     display: flex;
     padding: calc(2vw + 2vh);
     width: calc(10vw + 10vh);
-    height: calc(11vw + 11vh);
+    height: auto;
     z-index: 12;
     overflow: hidden;
     position: absolute;
@@ -111,6 +116,7 @@ h6 {
     color: #98faff;
     font-size: calc(0.4vw + 0.4vh);
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
 }
 
 @media screen and (orientation: portrait) {
@@ -278,9 +284,55 @@ img {
     margin: 0px;
     z-index: 0;
     position: sticky;
-    min-height: 200vh;
+    min-height: 100vh;
     width: 100vw;
     background: #146a6e;
+}
+
+.sprawozdania_list {
+    position: sticky;
+    display: block;
+    float: left;
+    padding: 0vh 5vh 0vh 0vh;
+    z-index: 0;
+    left: 38vw;
+    top: 8.7vh;
+}
+
+@media screen and (orientation: portrait) {
+    .sprawozdania_list {
+        left: 10vw;
+        top: 20vh;
+    }
+}
+
+.sprawozdania_list h1 {
+    pointer-events: initial;
+    z-index: 20;
+}
+
+.sprawozdania_list table {
+    width: 200%;
+    text-align: left;
+    color: #fff;
+    padding: 5%;
+    font-size: calc(0.3vw + 1.1vh);
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (orientation: portrait) {
+    .sprawozdania_list table {
+        font-size: calc(0.7vw + 0.7vh);
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .sprawozdania_list table svg {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 .kontakt {
@@ -288,10 +340,10 @@ img {
     padding: 0vh 3.5vh 0vh 0vh;
     z-index: 0;
     text-align: justify;
-    left: 30vw;
-    top: 5vh;
+    left: 40vw;
+    top: 8.7vh;
+    line-height: 5px;
 }
-
 @media screen and (orientation: portrait) {
     .kontakt {
         left: 10vw;
@@ -340,7 +392,7 @@ a {
     padding: 1px;
     margin: 0px;
     z-index: 9;
-    background: #2df1fd;
+    background: #146a6e;
 }
 
 .mapa {
