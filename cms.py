@@ -4,10 +4,10 @@ wiersze = []
 
 
 tytul = input("Dodaj tytuł ")
-tekst = input("Dodaj tekst sprawozdania ")
+tekst = input("Dodaj tekst wpisu ")
 
 
-strona = io.open("sprawozdania.htm", mode="r", encoding="utf-8")
+strona = io.open("example.htm", mode="r", encoding="utf-8")
 ilosc_wierszy = strona.readlines()
 
 for i in range(len(ilosc_wierszy)):
@@ -15,11 +15,11 @@ for i in range(len(ilosc_wierszy)):
     if ilosc_wierszy[i] == "<!--WPIS_POCZATEK-->\n":
         wiersze.append("<h2>" + tytul + "</h2>\n")
         wiersze.append("<h3>" + "Dodano: " + str(datetime.datetime.now())[:19] + "</h3>\n")
-        wiersze.append("<p>" + tekst + "<p>\n")
+        wiersze.append("<h4><p>" + tekst + "<p></h4>\n")
 
 strona.close()
 
-strona = io.open("sprawozdania.htm", mode="w", encoding="utf-8")
+strona = io.open("example.htm", mode="w", encoding="utf-8")
 ilosc_wierszy_po_edycji = len(wiersze)
 for i in range(ilosc_wierszy_po_edycji):
     strona.write(wiersze[i])
