@@ -8,91 +8,52 @@ html, body {
     background: #146a6e;
 }
 
-.burger {
-    width: 20%;
-    height: 10%;
-    cursor: pointer;
-    z-index: 13;
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-6.5px,6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-6.5px,-6px);
-}
-
-.burger div {
-    width: 80%;
-    height: 3px;
-    background-color: white;
-    margin: 6px;
-    cursor: pointer;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
 nav {
-    top: 6vh;
-    right: 50%;
-    display: flex;
-    padding: calc(2vw + 2vh);
-    width: calc(10vw + 10vh);
-    height: calc(11vw + 11vh);
-    z-index: 12;
-    overflow: hidden;
-    position: fixed;
-    justify-content: space-around;
-    right: 0px;
+    z-index: 10;
+    position: relative;
     font-family: 'Roboto', sans-serif;
+    float: right;
     font-size: calc(0.7vw + 0.7vh);
-    line-height: calc(1.3vw + 1.3vh);
+    opacity: 0.6;
+    padding: 0vh 5vh 0vh 0vh;
+    top: 8vh;
+    transform: scale(3);
+    display: inline-flex;
+    vertical-align: top;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: landscape) {
     nav {
-        padding: calc(2vw + 2vh);
-        width: calc(20vw + 20vh);
-        height: calc(22vw + 22vh);
-        font-size: calc(1.6vw + 1.6vh);
-        line-height: calc(2.5vw + 2.5vh);
-        top: 3vh;
-    } 
-}
-
-.nav_links {
-    padding: calc(0.5vw + 0.5vh);
-    filter: drop-shadow(0 0 0.5vw rgba(0,0,0,0.2));
-    align-items: left;
-    width: 100%;
-    text-decoration: none;
-    list-style: none;
-    transform: translateX(50vw);
-    flex-direction: column;
-    transition: transform 0.3s ease-out;
-    background-color: #2df1fd;
-}
-
-@media screen and (orientation: portrait) {
-    .nav_links {
-        transform: translateX(100vw);
+        top: 10vh;
+        transform: scale(1);
     }
 }
 
-.nav_links-active {
-    transform: translateX(0%);
+.nav_links {
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav_svg {
+    height: calc(0.7vw + 0.7vh);
+    width: auto;
+}
+
+.link_text {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+@media screen and (orientation: portrait) {
+    .link_text {
+        display: none;
+    }
 }
 
 h1 {
     color: white;
     font-size: 2vw;
     font-family: 'Calistoga', cursive;
-    pointer-events: none;
 }
 
 @media screen and (orientation: portrait) {
@@ -103,9 +64,9 @@ h1 {
 
 h2 {
     color: white;
-    font-size: 2vw;
+    font-size: 1.6vw;
+    opacity: 0.8;
     font-family: 'Calistoga', cursive;
-    pointer-events: none;
 }
 
 @media screen and (orientation: portrait) {
@@ -119,11 +80,23 @@ h3 {
     opacity: 0.4;
     font-size: calc(0.4vw + 0.4vh);
     font-family: 'Roboto', sans-serif;
-    pointer-events: none;
 }
 
 @media screen and (orientation: portrait) {
     h3 {
+        font-size: calc(0.6vw + 0.6vh);
+    }
+}
+
+h4 {
+    color: white;
+    font-size: calc(0.3vw + 1.1vh);
+    opacity: 0.8;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (orientation: portrait) {
+    h4 {
         font-size: calc(0.6vw + 0.6vh);
     }
 }
@@ -142,14 +115,6 @@ h6 {
 
 h6 a {
     color: #bffcff;
-}
-
-p {
-    color: white;
-    font-size: calc(0.25vw + 0.25vh);
-    font-family: 'Roboto', sans-serif;
-    pointer-events: none;
-    padding: 0vh 0vh 0vh 0vh;
 }
 
 @media screen and (orientation: portrait) {
