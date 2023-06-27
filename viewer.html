@@ -87,29 +87,7 @@
 			scene.addPointCloud(pointcloud);
 		});
 			
-			Potree.loadPointCloud("../Bobolice/TLS_parter/cloud.js", "TLS_parter", e => {
-			let scene = viewer.scene;
-			let pointcloud = e.pointcloud;
 			
-			let material = pointcloud.material;
-			material.size = 1;
-			material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
-			material.shape = Potree.PointShape.SQUARE;
-			material.pointColorType = Potree.PointColorType.HEIGHT;
-			scene.addPointCloud(pointcloud);
-		});
-		
-		Potree.loadPointCloud("../Bobolice/TLS_1pietro/cloud.js", "TLS_1_piętro", e => {
-			let scene = viewer.scene;
-			let pointcloud = e.pointcloud;
-			
-			let material = pointcloud.material;
-			material.size = 1;
-			material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
-			material.shape = Potree.PointShape.SQUARE;
-			material.pointColorType = Potree.PointColorType.HEIGHT;
-			scene.addPointCloud(pointcloud);
-		});
 		
 		
 	
